@@ -17,9 +17,7 @@ image:starter4.png[]
 
 == Running
 
-It should run in any JavaEE 6 or greater application server.
-
-You can also run via wildfly-swarm with command `mvn wildfly-swarm:run -swarm`.
+Tested on *Tomcat 8.5.3*
 
 == Demo
 
