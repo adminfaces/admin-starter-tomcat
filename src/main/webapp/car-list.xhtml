@@ -5,6 +5,8 @@
                 xmlns:adm="http://github.com/adminfaces"
                 template="#{layoutMB.layout}">
 
+    <ui:param name="title" value="Car listing"/> <!-- Automatic create breadCrumb and page title when param 'title' is provided. --> 
+
     <ui:define name="head-end">
         <style type="text/css">
             .ui-datatable .ui-datatable-header {
@@ -12,10 +14,6 @@
             }
 
         </style>
-    </ui:define>
-
-    <ui:define name="body-begin">
-        <ui:param name="title" value="Car listing"/> <!-- Automatic create breadCrumb and page title when param 'title' is provided. -->
     </ui:define>
 
     <ui:define name="description">
@@ -76,7 +74,7 @@
 
 
                         <f:facet name="header">
-                            Find Car by id: <p:inputNumber id="inptId" value="#{carListMB.id}"/>
+                            Find Car by id: <p:inputNumber id="inptId" decimalPlaces="0" value="#{carListMB.id}"/>
                             <p:spacer height="5"/>
                             <p:commandButton id="brFind"
                                              value="Find"
