@@ -3,6 +3,26 @@
 
 A simple project to get you started with https://github.com/adminfaces[AdminFaces^].
 
+== Building
+
+This project uses https://maven.apache.org/[Maven^] for the build:
+
+----
+mvn clean package
+----
+
+== Running
+
+Just deploy `admin-starter.war` generated in previous step into apache tomcat.
+
+Tested on *Tomcat 8.5.3*
+
+== Demo
+
+A live demo is available on Openshift here: http://admin-starter-admin-starter.1d35.starter-us-east-1.openshiftapps.com/admin-starter/
+
+== Screenshots
+
 .Login page
 image:starter1.png[]
 
@@ -14,11 +34,3 @@ image:starter3.png[]
 
 .Car form responsive
 image:starter4.png[]
-
-== Running
-
-Tested on *Tomcat 8.5.3*
-
-== Demo
-
-A live demo is available on Openshift here: http://starter-adminfaces.rhcloud.com/admin-starter/
