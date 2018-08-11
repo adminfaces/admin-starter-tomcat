@@ -25,14 +25,37 @@
             }
 
             html {
-                background: url(#{resource[ 'images:login-bg.jpg' ]}) no-repeat center center fixed;
+                background: url(${symbol_pound}{resource[ 'images:login-bg.jpg' ]}) no-repeat center center fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
                 background-size: cover;
             }
+            
             body .load-bar {
                 margin-top: -20px;
+            }
+
+            @media (max-width: 768px) {
+
+                body div.ui-growl {
+                    display: none;
+                }
+
+                body div.ui-messages-error {
+                    display: block;
+                }
+
+            }
+
+            @media (min-width: 769px) {
+                body div.ui-growl {
+                    display: block;
+                }
+
+                body div.ui-messages-error {
+                    display: none;
+                }
             }
         </style>
     </h:head>
