@@ -15,11 +15,13 @@ mvn clean package
 
 Just deploy `admin-starter.war` generated in previous step into apache tomcat.
 
-Tested on *Tomcat 8.5.3*
+Tested on *Tomcat 8.5.3* and *9.0.14*
 
 == Demo
 
-A live demo is available on Openshift here: http://admin-starter-admin-starter.1d35.starter-us-east-1.openshiftapps.com/admin-starter/
+* A live demo is available on Openshift here: http://admin-starter-admin-starter.1d35.starter-us-east-1.openshiftapps.com/admin-starter/
+
+* A youtube video showing how to run the application: https://youtu.be/1h7yMYgCgdE 
 
 == Screenshots
 
