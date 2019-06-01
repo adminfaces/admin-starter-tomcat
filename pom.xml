@@ -1,121 +1,179 @@
 <?xml version="1.0"?>
 <project
-        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-        xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.github.adminfaces</groupId>
-    <artifactId>admin-starter</artifactId>
-    <version>0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
-    <name>admin-starter</name>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.adminfaces</groupId>
+	<artifactId>admin-starter</artifactId>
+	<version>0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>admin-starter</name>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <adminfaces.version>1.0.0</adminfaces.version>
-    </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<adminfaces.version>1.0.0</adminfaces.version>
+		<owb.version>1.7.6</owb.version>
+	</properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
-            <scope>provided</scope>
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<!-- CDI -->
+		<dependency>
+			<groupId>org.apache.openwebbeans</groupId>
+			<artifactId>openwebbeans-spi</artifactId>
+			<version>${owb.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.openwebbeans</groupId>
+			<artifactId>openwebbeans-impl</artifactId>
+			<version>${owb.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.openwebbeans</groupId>
+			<artifactId>openwebbeans-web</artifactId>
+			<version>${owb.version}</version>
+		</dependency>
+		<dependency> <!-- CDI injection into servlets -->
+			<groupId>org.apache.openwebbeans</groupId>
+			<artifactId>openwebbeans-tomcat7</artifactId>
+			<version>${owb.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.openwebbeans</groupId>
+			<artifactId>openwebbeans-jsf</artifactId>
+			<version>${owb.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.1.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-atinject_1.0_spec</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-jcdi_2.0_spec</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-interceptor_1.2_spec</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-annotation_1.3_spec</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- JSF API e RI -->
+		<dependency>
+			<groupId>javax.faces</groupId>
+			<artifactId>javax.faces-api</artifactId>
+			<version>2.2</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- <dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.faces</artifactId>
+			<version>2.2.17</version>
+			<scope>runtime</scope>
+		</dependency> -->
+		<dependency>
+            <groupId>org.apache.myfaces.core</groupId>
+            <artifactId>myfaces-api</artifactId>
+            <version>2.2.12</version>
         </dependency>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
-        </dependency>
-        <!-- CDI -->
-        <dependency>
-            <groupId>javax.enterprise</groupId>
-            <artifactId>cdi-api</artifactId>
-            <version>1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.weld.servlet</groupId>
-            <artifactId>weld-servlet</artifactId>
-            <version>2.4.2.Final</version>
+            <groupId>org.apache.myfaces.core</groupId>
+            <artifactId>myfaces-impl</artifactId>
+            <version>2.2.12</version>
             <scope>runtime</scope>
         </dependency>
-        <!-- JSF API e RI -->
-        <dependency>
-            <groupId>javax.faces</groupId>
-            <artifactId>javax.faces-api</artifactId>
-            <version>2.2</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish</groupId>
-            <artifactId>javax.faces</artifactId>
-            <version>2.2.17</version>
-            <scope>runtime</scope>
-        </dependency>
 
-        <!-- API do JPA e EJB para o Admin Template (View de OptimisticLockException)
-            TODO: Fork para depender apenas de Servlet/JSF -->
-        <dependency>
-            <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.0-api</artifactId>
-            <version>1.0.1.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.ejb</groupId>
-            <artifactId>javax.ejb-api</artifactId>
-            <version>3.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.primefaces</groupId>
-            <artifactId>primefaces</artifactId>
-            <version>7.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.primefaces.extensions</groupId>
-            <artifactId>primefaces-extensions</artifactId>
-            <version>6.1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.adminfaces</groupId>
-            <artifactId>admin-template</artifactId>
-            <version>${adminfaces.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.adminfaces</groupId>
-            <artifactId>admin-theme</artifactId>
-            <version>${adminfaces.version}</version>
-            <!--<classifier>dev</classifier> uncompressed theme.css (note that you need to exclude admin-theme brought by admin-template dependency)-->
-        </dependency>
-        <dependency>
-            <groupId>org.omnifaces</groupId>
-            <artifactId>omnifaces</artifactId>
-            <version>2.6.1</version>
-        </dependency>
-    </dependencies>
-    <repositories>
-        <repository>
-            <snapshots/>
-            <id>snapshots</id>
-            <name>libs-snapshot</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </repository>
-        <repository>
-            <id>prime-repo</id>
-            <name>PrimeFaces Maven Repository</name>
-            <url>http://repository.primefaces.org</url>
-            <layout>default</layout>
-        </repository>
-    </repositories>
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-        <finalName>admin-starter</finalName>
-    </build>
+		<!-- API do JPA e EJB para o Admin Template (View de OptimisticLockException) 
+			TODO: Fork para depender apenas de Servlet/JSF -->
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.0-api</artifactId>
+			<version>1.0.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.ejb</groupId>
+			<artifactId>javax.ejb-api</artifactId>
+			<version>3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.primefaces.extensions</groupId>
+			<artifactId>primefaces-extensions</artifactId>
+			<version>6.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.adminfaces</groupId>
+			<artifactId>admin-template</artifactId>
+			<version>1.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.adminfaces</groupId>
+			<artifactId>admin-theme</artifactId>
+			<version>${adminfaces.version}</version>
+			<!--<classifier>dev</classifier> uncompressed theme.css (note that you 
+				need to exclude admin-theme brought by admin-template dependency) -->
+		</dependency>
+		<dependency>
+			<groupId>org.omnifaces</groupId>
+			<artifactId>omnifaces</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<snapshots />
+			<id>snapshots</id>
+			<name>libs-snapshot</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</repository>
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+		<finalName>admin-starter</finalName>
+	</build>
 </project>

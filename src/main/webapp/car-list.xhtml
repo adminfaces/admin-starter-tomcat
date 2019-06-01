@@ -6,7 +6,6 @@
                 template="#{layoutMB.template}">
     
     <ui:define name="metadata">
-        <ui:param name="title" value="Car listing"/> <!-- Automatic create breadCrumb and page title when param 'title' is provided. --> 
         <style type="text/css">
             .ui-datatable .ui-datatable-header {
                 text-align: right !important;
@@ -15,11 +14,16 @@
         </style>
     </ui:define>
     
+    <ui:define name="title">
+        Car listing
+    </ui:define>
+    
     <ui:define name="description">
         Find cars by name, price and model
     </ui:define>
 
     <ui:define name="body">
+        <adm:breadcrumb title="Car listing"/>
         <h:form>
             <div class="box box-primary">
                 <div class="box-header with-border">

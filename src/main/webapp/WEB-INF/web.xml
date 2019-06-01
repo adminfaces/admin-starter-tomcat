@@ -38,7 +38,7 @@
         <param-value>6</param-value>
     </context-param>
     <listener>
-        <listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
+        <listener-class>org.apache.webbeans.servlet.WebBeansConfigurationListener</listener-class>
     </listener>
     <resource-env-ref>
         <resource-env-ref-name>BeanManager</resource-env-ref-name>
