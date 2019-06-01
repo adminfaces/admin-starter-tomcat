@@ -12,11 +12,38 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<adminfaces.version>1.0.0</adminfaces.version>
+		<adminfaces.version>1.0.1</adminfaces.version>
 		<owb.version>1.7.6</owb.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.primefaces.extensions</groupId>
+			<artifactId>primefaces-extensions</artifactId>
+			<version>6.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.adminfaces</groupId>
+			<artifactId>admin-template</artifactId>
+			<version>${adminfaces.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.adminfaces</groupId>
+			<artifactId>admin-theme</artifactId>
+			<version>${adminfaces.version}</version>
+			<!--<classifier>dev</classifier> uncompressed theme.css (note that you
+				need to exclude admin-theme brought by admin-template dependency) -->
+		</dependency>
+		<dependency>
+			<groupId>org.omnifaces</groupId>
+			<artifactId>omnifaces</artifactId>
+			<version>2.6.1</version>
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -109,8 +136,6 @@
             <scope>runtime</scope>
         </dependency>
 
-		<!-- API do JPA e EJB para o Admin Template (View de OptimisticLockException) 
-			TODO: Fork para depender apenas de Servlet/JSF -->
 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
 			<artifactId>hibernate-jpa-2.0-api</artifactId>
@@ -120,33 +145,6 @@
 			<groupId>javax.ejb</groupId>
 			<artifactId>javax.ejb-api</artifactId>
 			<version>3.2</version>
-		</dependency>
-		<dependency>
-			<groupId>org.primefaces</groupId>
-			<artifactId>primefaces</artifactId>
-			<version>7.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.primefaces.extensions</groupId>
-			<artifactId>primefaces-extensions</artifactId>
-			<version>6.1.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.adminfaces</groupId>
-			<artifactId>admin-template</artifactId>
-			<version>1.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.adminfaces</groupId>
-			<artifactId>admin-theme</artifactId>
-			<version>${adminfaces.version}</version>
-			<!--<classifier>dev</classifier> uncompressed theme.css (note that you 
-				need to exclude admin-theme brought by admin-template dependency) -->
-		</dependency>
-		<dependency>
-			<groupId>org.omnifaces</groupId>
-			<artifactId>omnifaces</artifactId>
-			<version>2.6.1</version>
 		</dependency>
 	</dependencies>
 	<repositories>
