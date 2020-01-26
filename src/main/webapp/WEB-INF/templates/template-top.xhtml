@@ -39,25 +39,16 @@
         <ui:include src="/includes/controlsidebar-tabs-content.xhtml"/>
     </ui:define>
 
-
-    <ui:define name="footer">
+   <ui:define name="footer">
           <a target="_blank"
-           href="https://github.com/adminfaces/">
-            Copyright (C) 2017 - AdminFaces
+           href="https://adminfaces.github.io/site/">
+            AdminFaces - © 2017-2018
         </a>
 
         <div class="pull-right hidden-xs" style="color: gray">
             <i>#{msg['starter.version']}</i>
         </div>
 
-        <script type="text/javascript">
-            if(isMobile()) {
-                $('a.ui-link').click(function() {
-                    $(this).prop('disabled', true);
-                    showBar();
-                });
-            }
-        </script>
     </ui:define>
 
 
