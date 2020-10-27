@@ -37,6 +37,7 @@ target/
 # TestNG
 
 test-output/
+WebContent/
 
 
 

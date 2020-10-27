@@ -13,9 +13,14 @@ mvn clean package
 
 == Running
 
-Just deploy `admin-starter.war` generated in previous step into apache tomcat.
+Run the jar file generated from the previous step:
 
-Tested on *Tomcat 8.5.3* and *9.0.14*
+`java -jar admin-starter-executable.jar` 
+
+You can access the running webapp through:
+
+http://localhost:8080/admin-starter/
+
 
 == Demo
 
